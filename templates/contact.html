@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ request.get_host }} | Contact{% endblock title %}
+{% block content %}
+
+
+<!-- banner -->
+<div class="relative bg-cover bg-center py-14 sm:py-24 md:py-36 xl:py-56"
+     style="background-image: url('{% static "img/banner.jpg" %}');">
+    <div class="absolute w-full h-full left-0 top-0 bg-gray-900 opacity-40">
+    </div>
+    <h1 class="relative text-4xl sm:text-6xl text-white text-center">Contact Us</h1>
+    <div class="relative flex justify-center items-center gap-4 text-white mt-4">
+        <a href="index.html" class="font-medium hover:text-primary transition duration-300">Home</a>
+        <span class="font-medium"><i class="las la-long-arrow-alt-right"></i></span>
+        <span class="font-medium">Contact us</span>
+    </div>
+</div>
+<!-- banner end-->
+
+<!-- contact icon -->
+<div class="py-20">
+    <div class="w-full max-w-7xl mx-auto block md:flex justify-center items-start gap-8 xl:gap-12 px-8 md:px-0">
+        <!-- official address -->
+        <div class="flex md:block lg:flex gap-8 md:justify-center md:items-start">
+
+            <div class="relative flex justify-center items-center bg-primary text-3xl text-white w-14  sm:w-20 h-14 sm:h-20 rounded-full">
+                    <span class="absolute -top-4 sm:-top-6 -left-2 md:left-0 w-8 sm:w-12 h-8 sm:h-12 bg-primary-dark opacity-30 rounded-full">    
+                    </span> <i class="las la-map-marker"></i>
+            </div>
+
+            <div class="md:mt-4 lg:mt-0">
+                <p class="text-xl sm:text-2xl font-bold">Office Address</p>
+                <p class="text-gray-500 mt-2">Niewue Leliestraat 27-HS </p>
+            </div>
+        </div>
+        <!-- official address end -->
+
+        <!-- Email  address -->
+        <div class="flex md:block lg:flex gap-8 md:justify-center md:items-center mt-8 md:mt-0">
+
+            <div class="relative flex justify-center items-center bg-primary text-3xl text-white w-14  sm:w-20 h-14 sm:h-20 rounded-full">
+                <span class="absolute -top-4 sm:-top-6 -left-2 md:left-0 w-8 sm:w-12 h-8 sm:h-12 bg-primary-dark opacity-30 rounded-full"></span>
+                <i class="lar la-envelope-open"></i>
+            </div>
+
+            <div class="md:mt-4 lg:mt-0">
+                <p class="text-xl sm:text-2xl font-bold">Email Address</p>
+                <p class="text-sm sm:text-base text-gray-500 mt-2"> example@mail.com </p>
+                <p class="text-sm sm:text-base text-gray-500 mt-2"> www.example.com </p>
+            </div>
+        </div>
+        <!-- Email address end -->
+
+        <!-- Call  us -->
+        <div class="flex md:block lg:flex gap-8 md:justify-center md:items-center mt-8 md:mt-0">
+
+            <div class="relative flex justify-center items-center bg-primary text-3xl text-white w-14  sm:w-20 h-14 sm:h-20 rounded-full">
+                <span class="absolute -top-4 sm:-top-6 -left-2 md:left-0 w-8 sm:w-12 h-8 sm:h-12 bg-primary-dark opacity-30 rounded-full"></span>
+                <i class="las la-phone"></i>
+            </div>
+            <div class="md:mt-4 lg:mt-0">
+                <p class="text-xl sm:text-2xl  font-bold"> Call Us </p>
+                <p class="text-sm sm:text-base text-gray-500 mt-2"> +123-456789 </p>
+                <p class="text-sm sm:text-base text-gray-500 mt-2"> +123-45678 </p>
+            </div>
+        </div>
+        <!-- Call us end -->
+    </div>
+
+</div>
+<!-- contact icon -->
+
+<!-- form -->
+<div class="bg-primary relative z-10 mx-4 sm:mx-12 lg:mx-20 rounded-2xl mb-16 lg:mb-20">
+    <div class="container mx-auto lg:py-20 py-8 sm:py-12 px-4 sm:px-12 lg:px-16">
+        <h3 class="text-5xl text-center text-white font-semibold">Get In Touch</h3>
+        <p class="w-full max-w-2xl mx-auto text-white text-center mt-4">Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Pariatur quidem incidunt itaque in culpa magni quae optio tenetur praesentium autem!</p>
+
+        <form class="contact-form">
+            <div class="w-full max-w-5xl mx-auto grid grid-cols-2 gap-5 lg:gap-8 mt-6">
+                <div class="col-span-2 md:col-span-1 flex justify-between items-center relative">
+                    <input type="text" placeholder="Your full name"
+                           class="w-full rounded-lg focus:outline-none px-6 py-4" required>
+                    <span class="absolute text-2xl text-gray-500 right-3 top-3"> <i class="lar la-user"></i> </span>
+                </div>
+
+                <div class="col-span-2 md:col-span-1 flex justify-between items-center relative">
+                    <input type="email" placeholder="Your email address"
+                           class="w-full rounded-lg focus:outline-none px-6 py-4" required>
+                    <span class="absolute text-2xl text-gray-500 right-3 top-3"> <i
+                            class="las la-envelope-open"></i> </span>
+                </div>
+
+                <div class="col-span-2 relative">
+                    <span class="absolute right-3 top-4 text-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                             stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </span>
+                    <select class="appearance-none w-full bg-white rounded-lg cursor-pointer hover:bg-gray-100 px-6 py-4 text-gray-500">
+                        <option value="">Choose Subject</option>
+                        <option value="">Photographer</option>
+                        <option value="">Video Editor</option>
+                        <option value="">Designer</option>
+                    </select>
+                </div>
+
+                <div class="col-span-2 relative">
+                    <textarea class="w-full rounded-lg focus:outline-none p-4 resize-none h-40 md:h-56"
+                              placeholder="Write your comment.."></textarea>
+                    <span class="absolute text-2xl text-gray-500 right-2 top-2"> <i class="las la-pen"></i> </span>
+                </div>
+            </div>
+
+            <div class="flex justify-center items-center mt-6">
+                <button type="submit" class="primary-btn px-20 py-5 hover:bg-secondary text-white text-2xl rounded-lg">
+                    <span class="relative z-10">Send</span>
+                </button>
+            </div>
+            <p class="success-text text-white text-center mt-4 font-semibold hidden">We received your message. Thank
+                you!</p>
+
+        </form>
+    </div>
+</div>
+<!-- form end -->
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+
+<script
+          src="https://code.jquery.com/jquery-3.6.0.js"
+          integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+          crossorigin="anonymous"></script>
+          
+{% if messages %}
+{% for message in messages %}
+<div id="message" class="container">
+    <div class="alert alert-{{ message.tags }} alert-dismissible text-center" role="alert">
+        <!-- <button type="button" data-dismiss="alert" class="close"><span aria-hidden="true">&times;</span></button> -->
+        <strong>
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                ERROR
+            {% else %}
+                {{ message.tags|title }}
+            {% endif %}
+        </strong>
+        {{ message }}
+    </div>
+</div>
+<br>
+{% endfor %}
+{% endif %}
+
+<script>setTimeout(function(){
+$('#message').fadeOut('slow');
+}, 6000);</script>

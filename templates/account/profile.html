@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ request.get_host }} | Profile{% endblock title %}
+{% block content %}
+
+
+<center style="margin:0px 40px 0px 40px;">
+    {% include 'alert.html' %}
+    
+    <div class="">
+        {% if request.user.profile_picture %}
+        <img src="{{request.user.profile_picture.url}}" alt="" style="box-sizing: border-box;border-radius: 50%;border-color: turquoise;width: 25%;" class="image-open cursor-zoom-in w-full h-full sm:max-w-2xl object-cover">
+        {% endif %}
+        <form method="POST" action="{% url 'accounts:profile' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+                <div class="flex items-center space-x-2 mt-4 text-gray-600">
+                    
+                  <label class="text-sm">First Name</label>
+              </div>
+              <input type="text" placeholder="Enter your name" name="first_name" value="{% if request.user.first_name %}{{user.first_name}}{% endif %}"
+                     class="block w-full text-sm shadow rounded-md focus:outline-none py-3 px-5 mt-2" >
+            </div>
+
+            <div>
+                <div class="flex items-center space-x-2 mt-4 text-gray-600">
+                    
+                  <label class="text-sm">Last Name</label>
+              </div>
+              <input type="text" placeholder="Enter your name" name="last_name" value="{% if request.user.last_name %}{{user.last_name}}{% endif %}"
+                     class="block w-full text-sm shadow rounded-md focus:outline-none py-3 px-5 mt-2" >
+            </div>
+            <div>
+                <div class="flex items-center space-x-2 mt-4 text-gray-600">
+                    
+                  <label class="text-sm">Email</label> 
+              </div>
+              <input type="email" placeholder="Enter your name" name="email" value="{% if request.user.email %}{{user.email}}{% endif %}"
+                     class="block w-full text-sm shadow rounded-md focus:outline-none py-3 px-5 mt-2" >
+            </div>
+            <div>
+                <div class="flex items-center space-x-2 mt-4 text-gray-600">
+                    <span class="text-xl">
+                      <i class="las la-folder-plus"></i>
+                    </span>
+                  <label class="text-sm">Profile Picture</label>
+              </div>
+              <input type="file" name="profile_picture"
+                     class="block w-full text-sm shadow rounded-md focus:outline-none py-3 px-5 mt-2" accept="image/jpeg, image/png">
+            </div>
+            <br>
+            <div class="form-group">
+                <button id="con-b" type="submit" class="bg-primary hover:bg-primary-dark text-white font-semibold uppercase px-8 w-full sm:w-auto py-2 rounded-md flex items-center justify-center transition">
+                    <span class="mr-1 text-xl"><i class="las la-sign-in-alt"></i></span>Update</button>
+            </div>
+            </div>
+        </form>
+    </div>
+</center>
+
+<br><br><br>
+
+{% endblock %}

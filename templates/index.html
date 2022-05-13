@@ -1,0 +1,386 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<!-- banner -->
+<div class="relative bg-cover bg-center pt-16 pb-36 sm:pt-32 sm:pb-48 md:pb-56 md:pt-44 px-4"
+     style="background-image: url('{% static "img/banner.jpg" %}');">
+    <div class="absolute w-full h-full left-0 top-0 bg-gray-900 opacity-40">
+
+    </div>
+    <div class="container mx-auto text-center relative text-white">
+        <h1 class="text-5xl leading-12 sm:leanding-10 md::leading-normal text-white">
+            Biggest Online Image Marketplace
+        </h1>
+        <p class="text-xl text-white mt-4">Find your place among the world’s best photographers.</p>
+
+        <div class="relative w-full max-w-lg flex mx-auto items-center mt-8 px-6 sm:px-0">
+            <button class="w-full rounded-full text-left pl-16 py-4 text-gray-500 bg-white hover:bg-gray-50 open-search">
+                Quick search
+            </button>
+            <span class="pointer-events-none text-gray-500 absolute sm:right-6 right-10 text-sm inset-y-0 flex items-center">
+                    Ctrl+K
+                </span>
+            <span
+                    class="pointer-events-none absolute left-8 sm:left-6 inset-y-0 flex items-center text-2xl text-gray-600 hover:text-primary-dark">
+                    <i class="las la-search"></i>
+                </span>
+        </div>
+    </div>
+    <div class="absolute w-full bottom-0 left-0 bg-black bg-opacity-50 py-6">
+        <p class="relative z-10 text-white text-center text-lg font-semibold">Download unlimited photos. <a
+                href="#" class="text-primary">View our pricing</a>
+        </p>
+    </div>
+</div>
+<!-- banner end-->
+
+<!-- Inspiring image -->
+<div class="container mx-auto py-20 md:py-28">
+    <div class="text-center">
+        <p class="text-md md:text-xl mb-4 text-primary">Gallery</p>
+        <h2 class="text-2xl md:text-4xl font-medium mb-10">
+            Our Categories
+        </h2>
+    </div>
+
+    <div class="grid gap-4 grid-cols-12 px-4 md:px-0">
+        <div class="col-span-6 md:col-span-3 relative">
+            <a href="#" class="">
+                    <span
+                            class="after:block after:absolute after:w-full after:h-60 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition">
+                    </span>
+                <img src="{% static 'img/nature.jpg' %}" alt="" class="w-full h-60 object-cover rounded-xl">
+                <span
+                        class="text-2xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Nature</span>
+            </a>
+
+        </div>
+
+        <div class="col-span-6 md:col-span-3 relative">
+            <a href="#" class="">
+                    <span
+                            class="after:block after:absolute after:w-full after:h-60 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition"></span>
+                <img src="{% static 'img/travel.jpg' %}" alt="" class="w-full h-60 object-cover rounded-xl">
+                <span
+                        class="text-2xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Travel</span>
+            </a>
+
+        </div>
+
+        <div class="col-span-6 md:col-span-3 relative">
+            <a href="#" class="">
+                    <span
+                            class="after:block after:absolute after:w-full after:h-60 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition"></span>
+                <img src="{% static 'img/fusion.jpg' %}" alt="" class="w-full h-60 object-cover rounded-xl">
+                <span
+                        class="text-2xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Fusion</span>
+            </a>
+
+        </div>
+
+        <div class="col-span-6 md:col-span-3 relative">
+            <a href="#" class="">
+                    <span
+                            class="after:block after:absolute after:w-full after:h-60 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition"></span>
+                <img src="{% static 'img/family.jpg' %}" alt="" class="w-full h-60 object-cover rounded-xl">
+                <span
+                        class="text-2xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Family</span>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Inspiring image end -->
+
+<!-- Images & Illustrations-->
+<div class="container mx-auto">
+    <div class="text-center">
+        <p class="text-lg md:text-xl mb-4 text-primary">Top Selling</p>
+        <h2 class="text-2xl md:text-4xl font-medium mb-10">Best Images to Download</h2>
+    </div>
+
+    <div class="grid grid-cols-2 gap-6 px-4 sm:px-0">
+
+        <div class="col-span-2 lg:col-span-1 space-y-6">
+            <div
+                    class="group relative rounded-lg overflow-hidden bg-center bg-cover flex items-center justify-center">
+                <img src="{% static 'img/imgae-illustration-img.jpg' %}" class="w-full h-full rounded-xl">
+                <div
+                        class="p-4 pb-10 group-hover:pb-4 flex items-end justify-between absolute w-full h-full left-0 top-0 bg-gray-900 bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ">
+                    <p class="text-white text-3xl  lg:text-2xl xl:text-3xl">Winnter</p>
+                    <div class="flex items-center gap-3">
+                            <span class="text-white text-2xl hover:text-secondary transition"><i
+                                    class="las la-heart"></i></span>
+                        <a href="#" class="text-white text-3xl hover:text-secondary transition"> <i
+                                class="las la-shopping-cart"></i> </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6">
+                <div class="col-span-2 lg:col-span-1">
+                    <div
+                            class="group relative rounded-lg overflow-hidden bg-center bg-cover flex items-center justify-center">
+                        <img src="{% static 'img/imgae-illustration-img-2.jpg' %}" class="w-full h-full rounded-xl">
+                        <div
+                                class="p-4 pb-10 group-hover:pb-4 flex items-end justify-between absolute w-full h-full left-0 top-0 bg-gray-900 bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ">
+                            <p class="text-white text-3xl lg:text-xl xl:text-2xl">Sammer</p>
+                            <div class="flex items-center gap-3">
+                                    <span
+                                            class="text-white text-2xl lg:text-lg xl:text-2xl hover:text-secondary transition"><i
+                                            class="las la-heart"></i></span>
+                                <a href="#"
+                                   class="text-white text-3xl lg:text-2xl xl:text-3xl hover:text-secondary transition">
+                                    <i class="las la-shopping-cart"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-2 lg:col-span-1">
+                    <div
+                            class="group relative rounded-lg overflow-hidden bg-center bg-cover flex items-center justify-center">
+                        <img src="{% static 'img/imgae-illustration-img-3.jpg' %}" class="w-full h-full rounded-xl">
+                        <div
+                                class="p-4 pb-10 group-hover:pb-4 flex items-end justify-between absolute w-full h-full left-0 top-0 bg-gray-900 bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ">
+                            <p class="text-white text-3xl lg:text-xl xl:text-2xl">Trainer</p>
+                            <div class="flex items-center gap-3">
+                                    <span
+                                            class="text-white text-2xl lg:text-lg xl:text-2xl hover:text-secondary transition"><i
+                                            class="las la-heart"></i></span>
+                                <a href="#"
+                                   class="text-white text-3xl lg:text-2xl xl:text-3xl hover:text-secondary transition">
+                                    <i class="las la-shopping-cart"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-span-2 lg:col-span-1 space-y-6">
+
+            <div class="grid grid-cols-2 gap-6">
+
+                <div class="col-span-2 lg:col-span-1">
+                    <div
+                            class="group relative rounded-lg overflow-hidden bg-center bg-cover flex items-center justify-center">
+                        <img src="{% static 'img/imgae-illustration-img-4.jpg' %}" class="w-full h-full rounded-xl">
+                        <div
+                                class="p-4 pb-10 group-hover:pb-4 flex items-end justify-between absolute w-full h-full left-0 top-0 bg-gray-900 bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ">
+                            <p class="text-white text-3xl lg:text-xl xl:text-2xl 2xl:text-2xl">Photographer</p>
+                            <div class="flex items-center gap-3">
+                                    <span
+                                            class="text-white text-2xl lg:text-lg xl:text-2xl hover:text-secondary transition"><i
+                                            class="las la-heart"></i></span>
+                                <a href="#"
+                                   class="text-white text-3xl lg:text-2xl xl:text-3xl hover:text-secondary transition">
+                                    <i class="las la-shopping-cart"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-2 lg:col-span-1">
+                    <div
+                            class="group relative rounded-lg overflow-hidden bg-center bg-cover flex items-center justify-center">
+                        <img src="{% static 'img/imgae-illustration-img-5.jpg' %}" class="w-full h-full rounded-xl">
+                        <div
+                                class="p-4 pb-10 group-hover:pb-4 flex items-end justify-between absolute w-full h-full left-0 top-0 bg-gray-900 bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ">
+                            <p class="text-white text-3xl lg:text-xl xl:text-2xl">Kids</p>
+                            <div class="flex items-center gap-4">
+                                    <span
+                                            class="text-white text-2xl lg:text-lg xl:text-2xl  hover:text-secondary transition"><i
+                                            class="las la-heart"></i></span>
+                                <a href="#"
+                                   class="text-white text-3xl lg:text-2xl xl:text-3xl hover:text-secondary transition">
+                                    <i class="las la-shopping-cart"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-2 lg:col-span-1">
+                <div
+                        class="group relative rounded-lg overflow-hidden bg-center bg-cover flex items-center justify-center">
+                    <img src="{% static 'img/imgae-illustration-img-6.jpg' %}" class="w-full h-full rounded-xl">
+                    <div
+                            class="p-4 pb-10 group-hover:pb-4 flex items-end justify-between absolute w-full h-full left-0 top-0 bg-gray-900 bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ">
+                        <p class="text-white text-3xl  lg:text-2xl xl:text-3xl">Black & White</p>
+                        <div class="flex gap-3 items-center">
+                                <span class="text-white text-2xl hover:text-secondary transition"><i
+                                        class="las la-heart"></i></span>
+                            <a href="#" class="text-white text-3xl hover:text-secondary transition"> <i
+                                    class="las la-shopping-cart"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Images & Illustrations end -->
+
+<!-- trending categories -->
+<div class="container mx-auto py-20">
+    <div class="text-center">
+        <p class="text-lg sm:text-xl mb-4 text-primary">More Photos</p>
+        <h2 class="text-2xl sm:text-4xl font-medium mb-10">Trending Categoriess</h2>
+    </div>
+
+    <div class="grid grid-cols-12 gap-4 px-4 sm:px-0">
+        <!-- Agency -->
+        <div class="col-span-6 md:col-span-2 relative">
+            <a href="#" class="">
+                    <span
+                            class="after:block after:absolute after:w-full after:h-32  after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition">
+                    </span>
+                <img src="{% static 'img/agency.jpg' %}" alt="" class="w-full h-32 object-cover rounded-xl">
+                <span
+                        class="text-xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Agency</span>
+            </a>
+        </div>
+        <!-- Agency end -->
+        <!-- Animal -->
+        <div class="col-span-6 md:col-span-2 relative">
+            <a href="#" class="">
+                    <span
+                            class="after:block after:absolute after:w-full after:h-32 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition"></span>
+                <img src="{% static 'img/animal.jpg' %}" alt="" class="w-full h-32 object-cover rounded-xl">
+                <span
+                        class="text-xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Animal</span>
+            </a>
+
+        </div>
+        <!-- Animal end -->
+        <!-- Photo -->
+        <div class="col-span-6 md:col-span-2 relative">
+            <a href="#" class="">
+                    <span
+                            class="after:block after:absolute after:w-full after:h-32 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition"></span>
+                <img src="{% static 'img/photo.jpg' %}" alt="" class="w-full h-32 object-cover rounded-xl">
+                <span
+                        class="text-xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Photo</span>
+            </a>
+        </div>
+        <!-- Photo end -->
+        <!-- Business -->
+        <div class="col-span-6 md:col-span-2 relative">
+            <a href="#" class="">
+                    <span
+                            class="after:block after:absolute after:w-full after:h-32 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition"></span>
+                <img src="{% static 'img/business.jpg' %}" alt="" class="w-full h-32 object-cover rounded-xl">
+                <span
+                        class="text-xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Business</span>
+            </a>
+        </div>
+        <!-- Business end -->
+        <!-- Sports -->
+        <div class="col-span-6 md:col-span-2 relative">
+            <a href="#" class="">
+                    <span
+                            class="after:block after:absolute after:w-full after:h-32 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition"></span>
+                <img src="{% static 'img/sports.jpg' %}" alt="" class="w-full h-32 object-cover rounded-xl">
+                <span
+                        class="text-xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Sports</span>
+            </a>
+        </div>
+        <!-- Sports end -->
+        <!-- Health -->
+        <div class="col-span-6 md:col-span-2 relative">
+            <a href="#" class="">
+                    <span
+                            class="after:block after:absolute after:w-full after:h-32 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition"></span>
+                <img src="{% static 'img/health.jpg' %}" alt="" class="w-full h-32 object-cover rounded-xl">
+                <span
+                        class="text-xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Health</span>
+            </a>
+        </div>
+        <!-- Health end -->
+    </div>
+</div>
+<!-- trending categories end -->
+
+<!-- testimonial -->
+<div class="bg-gray-50">
+    <div class="container mx-auto py-12 md:py-16 lg:py-28">
+        <div class="text-center">
+            <p class="text-xl mb-4 text-primary">Testimonials</p>
+            <h2 class="text-2xl md:text-4xl font-medium mb-10">What Our Clients Say</h2>
+        </div>
+
+        <div class="grid gap-4 grid-cols-12 mx-6 md:mx-3 lg:mx-0">
+            <div class="col-span-12 md:col-span-6 lg:col-span-4">
+                <div class="block bg-white  shadow rounded-xl lg:px-12 px-4 lg:py-10 py-6">
+                    <div class="w-20 h-20 flex mx-auto ring-4 ring-gray-200 rounded-full mb-4">
+                        <img src="{% static 'img/testimonial-img.jpg' %}" alt="" class="w-full h-full object-cover rounded-full">
+                    </div>
+
+                    <p class="text-gray-500 text-center leading-8">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Id soluta, exercitationem modi voluptatem labore eligendi nam quidem
+                        placeat cum, nobis provident ducimus excepturi rerum deleniti assumenda. Officiis
+                        accusantium hic tempora voluptatum cumque eius pariatur, ullam impedit adipisci nihil vel
+                        soluta?</p>
+                    <h4 class="font-semibold text-lg text-center mt-4">William</h4>
+                    <p class="text-gray-500 text-center text-sm">Youtuber</p>
+                </div>
+            </div>
+
+            <div class="col-span-12 md:col-span-6 lg:col-span-4">
+                <div class="block bg-white  shadow rounded-xl lg:px-12 px-4 lg:py-10 py-6">
+                    <div class="w-20 h-20 flex mx-auto ring-4 ring-gray-200 rounded-full mb-4">
+                        <img src="{% static 'img/testimonial-img-2.jpg' %}" alt="" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <p class="text-gray-500 text-center leading-8">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Id soluta, exercitationem modi voluptatem labore eligendi nam quidem
+                        placeat cum, nobis provident ducimus excepturi rerum deleniti assumenda. Officiis
+                        accusantium hic tempora voluptatum cumque eius pariatur, ullam impedit adipisci nihil vel
+                        soluta</p>
+                    <h4 class="font-semibold text-lg text-center mt-4">Alex</h4>
+                    <p class="text-gray-500 text-center text-sm">CEO</p>
+                </div>
+            </div>
+
+            <div class="col-span-12 md:col-span-6 lg:col-span-4 sm:hidden lg:flex">
+                <div class="block bg-white  shadow rounded-xl lg:px-12 px-4 lg:py-10 py-6">
+                    <div class="w-20 h-20 flex mx-auto ring-4 ring-gray-200 rounded-full mb-4">
+                        <img src="{% static 'img/testimonial-img-3.jpg' %}" alt="" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <p class="text-gray-500 text-center leading-8">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Id soluta, exercitationem modi voluptatem labore eligendi nam quidem
+                        placeat cum, nobis provident ducimus excepturi rerum deleniti assumenda. Officiis
+                        accusantium hic tempora voluptatum cumque eius pariatur, ullam impedit adipisci nihil vel
+                        soluta</p>
+                    <h4 class="font-semibold text-lg text-center mt-4">Sammy</h4>
+                    <p class="text-gray-500 text-center text-sm">Designer</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- testimonial end -->
+
+<!-- popular -->
+<div class="relative bg-cover bg-center pt-20 md:pt-48 pb-40 md:pb-48"
+     style="background-image: url('{% static "img/popular-tixefy-img.jpg" %}');">
+    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+    <div class="container mx-auto text-center relative">
+        <p class="text-2xl md:text-4xl text-white">Explore Our Popular best <br>Collections</p>
+        <div class="text-center flex justify-center mt-8">
+            <button class="primary-btn">Join Now</button>
+        </div>
+    </div>
+    <div class="absolute w-full bottom-0 left-0 bg-black opacity-75 py-6">
+        <p class="relative z-10 text-white text-center text-lg font-semibold">Ready to Sell Your Images? <a href="#"
+                                                                                                            class="block md:inline-block text-primary">Sign
+            up Now.</a></p>
+    </div>
+</div>
+<!-- popular end -->
+
+
+{% endblock %}
