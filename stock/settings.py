@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&b^(dih0861&$*6!b=w(kp9j3@c9_ge^*hxq27ns2lt_*)$@5+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'kelvinstock.herokuapp.com','*',]
 
