@@ -78,7 +78,8 @@
         <p class="w-full max-w-2xl mx-auto text-white text-center mt-4">Lorem ipsum dolor sit amet, consectetur
             adipisicing elit. Pariatur quidem incidunt itaque in culpa magni quae optio tenetur praesentium autem!</p>
 
-        <form class="contact-form">
+        <form class="contact-form" method="POST" action="{% url 'contact' %}">
+            {% csrf_token %}
             <div class="w-full max-w-5xl mx-auto grid grid-cols-2 gap-5 lg:gap-8 mt-6">
                 <div class="col-span-2 md:col-span-1 flex justify-between items-center relative">
                     <input type="text" placeholder="Your full name"

@@ -30,9 +30,9 @@
         </div>
     </div>
     <div class="absolute w-full bottom-0 left-0 bg-black bg-opacity-50 py-6">
-        <p class="relative z-10 text-white text-center text-lg font-semibold">Download unlimited photos. <a
+        <!-- <p class="relative z-10 text-white text-center text-lg font-semibold">Download unlimited photos. <a
                 href="#" class="text-primary">View our pricing</a>
-        </p>
+        </p> -->
     </div>
 </div>
 <!-- banner end-->
@@ -47,19 +47,21 @@
     </div>
 
     <div class="grid gap-4 grid-cols-12 px-4 md:px-0">
+        {% for category in links %}
         <div class="col-span-6 md:col-span-3 relative">
-            <a href="#" class="">
+            <a href="{{ category.get_url }}" class="">
                     <span
                             class="after:block after:absolute after:w-full after:h-60 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition">
                     </span>
-                <img src="{% static 'img/nature.jpg' %}" alt="" class="w-full h-60 object-cover rounded-xl">
+                <img src="{{ category.cat_image.url }}" alt="" class="w-full h-60 object-cover rounded-xl">
                 <span
-                        class="text-2xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Nature</span>
+                        class="text-2xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">{{ category.category_name }}</span>
             </a>
 
         </div>
+        {% endfor %}
 
-        <div class="col-span-6 md:col-span-3 relative">
+        <!-- <div class="col-span-6 md:col-span-3 relative">
             <a href="#" class="">
                     <span
                             class="after:block after:absolute after:w-full after:h-60 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition"></span>
@@ -89,7 +91,7 @@
                 <span
                         class="text-2xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Family</span>
             </a>
-        </div>
+        </div> -->
     </div>
 </div>
 <!-- Inspiring image end -->
@@ -110,12 +112,12 @@
                 <div
                         class="p-4 pb-10 group-hover:pb-4 flex items-end justify-between absolute w-full h-full left-0 top-0 bg-gray-900 bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ">
                     <p class="text-white text-3xl  lg:text-2xl xl:text-3xl">Winnter</p>
-                    <div class="flex items-center gap-3">
+                    <!-- <div class="flex items-center gap-3">
                             <span class="text-white text-2xl hover:text-secondary transition"><i
                                     class="las la-heart"></i></span>
                         <a href="#" class="text-white text-3xl hover:text-secondary transition"> <i
                                 class="las la-shopping-cart"></i> </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -127,14 +129,14 @@
                         <div
                                 class="p-4 pb-10 group-hover:pb-4 flex items-end justify-between absolute w-full h-full left-0 top-0 bg-gray-900 bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ">
                             <p class="text-white text-3xl lg:text-xl xl:text-2xl">Sammer</p>
-                            <div class="flex items-center gap-3">
+                            <!-- <div class="flex items-center gap-3">
                                     <span
                                             class="text-white text-2xl lg:text-lg xl:text-2xl hover:text-secondary transition"><i
                                             class="las la-heart"></i></span>
                                 <a href="#"
                                    class="text-white text-3xl lg:text-2xl xl:text-3xl hover:text-secondary transition">
                                     <i class="las la-shopping-cart"></i> </a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -146,14 +148,14 @@
                         <div
                                 class="p-4 pb-10 group-hover:pb-4 flex items-end justify-between absolute w-full h-full left-0 top-0 bg-gray-900 bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ">
                             <p class="text-white text-3xl lg:text-xl xl:text-2xl">Trainer</p>
-                            <div class="flex items-center gap-3">
+                            <!-- <div class="flex items-center gap-3">
                                     <span
                                             class="text-white text-2xl lg:text-lg xl:text-2xl hover:text-secondary transition"><i
                                             class="las la-heart"></i></span>
                                 <a href="#"
                                    class="text-white text-3xl lg:text-2xl xl:text-3xl hover:text-secondary transition">
                                     <i class="las la-shopping-cart"></i> </a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -171,14 +173,14 @@
                         <div
                                 class="p-4 pb-10 group-hover:pb-4 flex items-end justify-between absolute w-full h-full left-0 top-0 bg-gray-900 bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ">
                             <p class="text-white text-3xl lg:text-xl xl:text-2xl 2xl:text-2xl">Photographer</p>
-                            <div class="flex items-center gap-3">
+                            <!-- <div class="flex items-center gap-3">
                                     <span
                                             class="text-white text-2xl lg:text-lg xl:text-2xl hover:text-secondary transition"><i
                                             class="las la-heart"></i></span>
                                 <a href="#"
                                    class="text-white text-3xl lg:text-2xl xl:text-3xl hover:text-secondary transition">
                                     <i class="las la-shopping-cart"></i> </a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -190,14 +192,14 @@
                         <div
                                 class="p-4 pb-10 group-hover:pb-4 flex items-end justify-between absolute w-full h-full left-0 top-0 bg-gray-900 bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ">
                             <p class="text-white text-3xl lg:text-xl xl:text-2xl">Kids</p>
-                            <div class="flex items-center gap-4">
+                            <!-- <div class="flex items-center gap-4">
                                     <span
                                             class="text-white text-2xl lg:text-lg xl:text-2xl  hover:text-secondary transition"><i
                                             class="las la-heart"></i></span>
                                 <a href="#"
                                    class="text-white text-3xl lg:text-2xl xl:text-3xl hover:text-secondary transition">
                                     <i class="las la-shopping-cart"></i> </a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -210,12 +212,12 @@
                     <div
                             class="p-4 pb-10 group-hover:pb-4 flex items-end justify-between absolute w-full h-full left-0 top-0 bg-gray-900 bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ">
                         <p class="text-white text-3xl  lg:text-2xl xl:text-3xl">Black & White</p>
-                        <div class="flex gap-3 items-center">
+                        <!-- <div class="flex gap-3 items-center">
                                 <span class="text-white text-2xl hover:text-secondary transition"><i
                                         class="las la-heart"></i></span>
                             <a href="#" class="text-white text-3xl hover:text-secondary transition"> <i
                                     class="las la-shopping-cart"></i> </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -230,22 +232,26 @@
         <p class="text-lg sm:text-xl mb-4 text-primary">More Photos</p>
         <h2 class="text-2xl sm:text-4xl font-medium mb-10">Trending Categoriess</h2>
     </div>
+    
+    
 
     <div class="grid grid-cols-12 gap-4 px-4 sm:px-0">
+        {% for category in links %}
         <!-- Agency -->
         <div class="col-span-6 md:col-span-2 relative">
-            <a href="#" class="">
+            <a href="{{ category.get_url }}" class="">
                     <span
                             class="after:block after:absolute after:w-full after:h-32  after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition">
                     </span>
-                <img src="{% static 'img/agency.jpg' %}" alt="" class="w-full h-32 object-cover rounded-xl">
+                <img src="{{ category.cat_image.url }}" alt="" class="w-full h-32 object-cover rounded-xl">
                 <span
-                        class="text-xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Agency</span>
+                        class="text-xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">{{ category.category_name }}</span>
             </a>
         </div>
+        {% endfor %}
         <!-- Agency end -->
         <!-- Animal -->
-        <div class="col-span-6 md:col-span-2 relative">
+        <!-- <div class="col-span-6 md:col-span-2 relative">
             <a href="#" class="">
                     <span
                             class="after:block after:absolute after:w-full after:h-32 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition"></span>
@@ -254,10 +260,10 @@
                         class="text-xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Animal</span>
             </a>
 
-        </div>
+        </div> -->
         <!-- Animal end -->
         <!-- Photo -->
-        <div class="col-span-6 md:col-span-2 relative">
+        <!-- <div class="col-span-6 md:col-span-2 relative">
             <a href="#" class="">
                     <span
                             class="after:block after:absolute after:w-full after:h-32 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition"></span>
@@ -265,10 +271,10 @@
                 <span
                         class="text-xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Photo</span>
             </a>
-        </div>
+        </div> -->
         <!-- Photo end -->
         <!-- Business -->
-        <div class="col-span-6 md:col-span-2 relative">
+        <!-- <div class="col-span-6 md:col-span-2 relative">
             <a href="#" class="">
                     <span
                             class="after:block after:absolute after:w-full after:h-32 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition"></span>
@@ -276,10 +282,10 @@
                 <span
                         class="text-xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Business</span>
             </a>
-        </div>
+        </div> -->
         <!-- Business end -->
         <!-- Sports -->
-        <div class="col-span-6 md:col-span-2 relative">
+        <!-- <div class="col-span-6 md:col-span-2 relative">
             <a href="#" class="">
                     <span
                             class="after:block after:absolute after:w-full after:h-32 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition"></span>
@@ -287,10 +293,10 @@
                 <span
                         class="text-xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Sports</span>
             </a>
-        </div>
+        </div> -->
         <!-- Sports end -->
         <!-- Health -->
-        <div class="col-span-6 md:col-span-2 relative">
+        <!-- <div class="col-span-6 md:col-span-2 relative">
             <a href="#" class="">
                     <span
                             class="after:block after:absolute after:w-full after:h-32 after:top-0 after:left-0 after:bg-black after:opacity-30 after:rounded-xl after:hover:opacity-50 after:transition"></span>
@@ -298,14 +304,14 @@
                 <span
                         class="text-xl text-white absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4">Health</span>
             </a>
-        </div>
+        </div> -->
         <!-- Health end -->
     </div>
 </div>
 <!-- trending categories end -->
 
 <!-- testimonial -->
-<div class="bg-gray-50">
+<!-- <div class="bg-gray-50">
     <div class="container mx-auto py-12 md:py-16 lg:py-28">
         <div class="text-center">
             <p class="text-xl mb-4 text-primary">Testimonials</p>
@@ -361,7 +367,7 @@
 
         </div>
     </div>
-</div>
+</div> -->
 <!-- testimonial end -->
 
 <!-- popular -->
@@ -371,13 +377,13 @@
     <div class="container mx-auto text-center relative">
         <p class="text-2xl md:text-4xl text-white">Explore Our Popular best <br>Collections</p>
         <div class="text-center flex justify-center mt-8">
-            <button class="primary-btn">Join Now</button>
+            <a href="{% url 'home' %}"><button class="primary-btn">Join Now</button></a>
         </div>
     </div>
     <div class="absolute w-full bottom-0 left-0 bg-black opacity-75 py-6">
-        <p class="relative z-10 text-white text-center text-lg font-semibold">Ready to Sell Your Images? <a href="#"
+        <!-- <p class="relative z-10 text-white text-center text-lg font-semibold">Ready to Sell Your Images? <a href="#"
                                                                                                             class="block md:inline-block text-primary">Sign
-            up Now.</a></p>
+            up Now.</a></p> -->
     </div>
 </div>
 <!-- popular end -->
