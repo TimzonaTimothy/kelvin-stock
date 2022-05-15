@@ -73,22 +73,23 @@
 
 <!-- form -->
 <div class="bg-primary relative z-10 mx-4 sm:mx-12 lg:mx-20 rounded-2xl mb-16 lg:mb-20">
+    {% include 'alert.html' %}
     <div class="container mx-auto lg:py-20 py-8 sm:py-12 px-4 sm:px-12 lg:px-16">
         <h3 class="text-5xl text-center text-white font-semibold">Get In Touch</h3>
-        <p class="w-full max-w-2xl mx-auto text-white text-center mt-4">Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Pariatur quidem incidunt itaque in culpa magni quae optio tenetur praesentium autem!</p>
+        <!-- <p class="w-full max-w-2xl mx-auto text-white text-center mt-4">Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Pariatur quidem incidunt itaque in culpa magni quae optio tenetur praesentium autem!</p> -->
 
         <form class="contact-form" method="POST" action="{% url 'contact' %}">
             {% csrf_token %}
             <div class="w-full max-w-5xl mx-auto grid grid-cols-2 gap-5 lg:gap-8 mt-6">
                 <div class="col-span-2 md:col-span-1 flex justify-between items-center relative">
-                    <input type="text" placeholder="Your full name"
+                    <input type="text" placeholder="Your full name" name="full_name"
                            class="w-full rounded-lg focus:outline-none px-6 py-4" required>
                     <span class="absolute text-2xl text-gray-500 right-3 top-3"> <i class="lar la-user"></i> </span>
                 </div>
 
                 <div class="col-span-2 md:col-span-1 flex justify-between items-center relative">
-                    <input type="email" placeholder="Your email address"
+                    <input type="email" placeholder="Your email address" name="email"
                            class="w-full rounded-lg focus:outline-none px-6 py-4" required>
                     <span class="absolute text-2xl text-gray-500 right-3 top-3"> <i
                             class="las la-envelope-open"></i> </span>
@@ -101,16 +102,17 @@
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </span>
-                    <select class="appearance-none w-full bg-white rounded-lg cursor-pointer hover:bg-gray-100 px-6 py-4 text-gray-500">
+                    <!-- <select class="appearance-none w-full bg-white rounded-lg cursor-pointer hover:bg-gray-100 px-6 py-4 text-gray-500">
                         <option value="">Choose Subject</option>
                         <option value="">Photographer</option>
                         <option value="">Video Editor</option>
                         <option value="">Designer</option>
-                    </select>
+                    </select> -->
+                    <input type="text" placeholder="Subject" name="message_subject" class="w-full bg-white rounded-lg cursor-pointer hover:bg-gray-100 px-6 py-4 text-gray-500">
                 </div>
 
                 <div class="col-span-2 relative">
-                    <textarea class="w-full rounded-lg focus:outline-none p-4 resize-none h-40 md:h-56"
+                    <textarea class="w-full rounded-lg focus:outline-none p-4 resize-none h-40 md:h-56" name="message"
                               placeholder="Write your comment.."></textarea>
                     <span class="absolute text-2xl text-gray-500 right-2 top-2"> <i class="las la-pen"></i> </span>
                 </div>

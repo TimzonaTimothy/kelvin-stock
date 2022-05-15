@@ -526,8 +526,8 @@
 
         <div class="col-span-12 sm:col-span-6 md:col-span-4 pt-6 md:pt-0">
             <h4 class="text-2xl font-medium mb-4">Newsaletter</h4>
-            <p class="text-sm mb-4 text-gray-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus,
-                qui.</p>
+            <p class="text-sm mb-4 text-gray-300">Always get in touch with us by subscribing to our newsletter,
+                </p>
             <div class="w-full flex border border-primary rounded-full mb-4">
                 <input type="text" placeholder="your email"
                        class="w-full overflow-hidden bg-gray-900 rounded-l-full focus:outline-none p-2 md:p-0 lg:p-4 pl-6 md:pl-4 lg:pl-6">
@@ -538,8 +538,14 @@
     </div>
 </div>
 <div class="py-4 bg-black text-primary text-center">
-    Chobi © 2022. All Rights Reserved.
+    Chobi © <span class="year"></span>. All Rights Reserved.
 </div>
+
+<script>
+    const date = new Date();
+ document.querySelector('.year').innerHTML = date.getFullYear();
+ 
+ </script>
 <!-- footer end -->
 
 <script src="{% static 'main.js' %}"></script>
