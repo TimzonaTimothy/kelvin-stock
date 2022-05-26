@@ -29,6 +29,7 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('accounts/', include('accounts.urls')),
     path('store/', include('store.urls')),
+    path('', include('payments.urls')),
     path('forgetpassword', forgetpassword, name='forgetpassword'),
     path('resetpassword_validate/<uidb64>/<token>/', resetpassword_validate, name='resetpassword_validate'),
     path('resetpassword', resetpassword, name='resetpassword'),

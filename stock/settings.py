@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'accounts',
     'store',
     'cloudinary',
+    'payments',
     # 'django.contrib.sites',
 
     # 'allauth',
@@ -203,6 +204,12 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
     
 }
+
+
+PAYSTACK_PUBLIC_KEY = 'pk_test_14162cb89ec6e813cf664044d2cf5a44f5b40255'
+
+PAYSTACK_SECRET_KEY = 'sk_test_00996e7a1407f509caf669fe490643527ab48770'
+
 
 if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
