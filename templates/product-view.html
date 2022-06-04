@@ -4,6 +4,8 @@
 
 
 {% block content %}
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<!-- <script src="https://js.paystack.co/v2/inline.js"></script> -->
 <style>
     .moda {
   display: none; /* Hidden by default */
@@ -108,7 +110,7 @@
                   <span class="close">&times;</span>
                     
                         <input class="w-full text-sm shadow rounded-md focus:outline-none py-3 px-5 mt-2"  type="number" placeholder="Amount To Donate" name="deposit_amount" id="deposit_amount" required>
-                        <script src="https://js.paystack.co/v1/inline.js"></script>
+                        
                         <button onclick="payWithPayStack()"
                                 class="w-full bg-primary hover:bg-primary-dark transition text-white text-xl py-3 rounded-lg mt-8">
                             <span><i class="las la-dollar-sign"></i></span>Donate 
@@ -145,7 +147,27 @@
 <!--Image modal end-->
 
 <script>
-    var modal = document.getElementById("myModa");
+
+
+const getCookie = (name) => {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+const csrftoken = getCookie('csrftoken');
+
+console.log(csrftoken);
+var modal = document.getElementById("myModa");
 
 // Get the button that opens the modal
 var btn = document.getElementById("doBtn");
@@ -171,22 +193,7 @@ window.onclick = function(event) {
 } 
 
 
-    const getCookie = (name) => {
-            let cookieValue = null;
-            if (document.cookie && document.cookie !== '') {
-                const cookies = document.cookie.split(';');
-                for (let i = 0; i < cookies.length; i++) {
-                    const cookie = cookies[i].trim();
-                    // Does this cookie string begin with the name we want?
-                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                        break;
-                    }
-                }
-            }
-            return cookieValue;
-        }
-        const csrftoken = getCookie('csrftoken');
+    
 
 
     function payWithPayStack(){
@@ -214,8 +221,8 @@ window.onclick = function(event) {
                     
                     success: function(response){
                         console.log(response);
-                        location.reload();
-                        // window.location.href = redirect_url + 'ref='+ref;
+                        // location.reload();
+                        window.location.href = redirect_url + 'ref='+ref;
                       
 
                     },

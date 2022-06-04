@@ -20,7 +20,7 @@ def deposit(request):
         user = request.user
         if request.user.is_authenticated:
             deposit = Payment.objects.create(amount_paid=amount,ref=ref,user=user,)
-            deposit.verify = True
+            deposit.verified = True
             deposit.save();
             deposited = True
             messages.success(request, 'Success, Deposit Successful')   

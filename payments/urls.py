@@ -10,7 +10,7 @@ from django.views.static import serve
 
 
 urlpatterns = [
-    path('deposit', deposit, name="deposit"),
+    path('deposit/', deposit, name="deposit"),
     path('deposited/', deposit_complete, name='deposit_detail'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
