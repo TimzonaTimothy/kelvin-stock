@@ -151,9 +151,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'https-flenzy-herokuapp-com',
-    'API_KEY': '221637641144182',
-    'API_SECRET': 'NNS0aVlG_ipg7sMxBBC7KK9ZCGA'
+    'CLOUD_NAME': '',
+    'API_KEY': '',
+    'API_SECRET': ''
 }
 
 
@@ -194,8 +194,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'arizonatymothy@gmail.com'
-EMAIL_HOST_PASSWORD = 'sohbennpawuturpa'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 
@@ -206,9 +206,9 @@ MESSAGE_TAGS = {
 }
 
 
-PAYSTACK_PUBLIC_KEY = 'pk_test_14162cb89ec6e813cf664044d2cf5a44f5b40255'
+PAYSTACK_PUBLIC_KEY = ''
 
-PAYSTACK_SECRET_KEY = 'sk_test_00996e7a1407f509caf669fe490643527ab48770'
+PAYSTACK_SECRET_KEY = ''
 
 
 if os.getcwd() == '/app':
@@ -228,6 +228,3 @@ if os.getcwd() == '/app':
 # ACCOUNT_EMAIL_REQUIRED = True
 # ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 # ACCOUNT_USERNAME_REQUIRED = False
-
-GP_CLIENT_ID = '586705258705-g3e3ln3686kk5kjaujml7g9jthvp739b.apps.googleusercontent.com'
-GP_CLIENT_SECRET = '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'
